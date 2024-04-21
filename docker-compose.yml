@@ -21,8 +21,8 @@ services:
 #            - '80:80'
     image: eazytraining/static-website-eazy
     environment:
-      - VIRTUAL_HOST=lepro.ddns.net
-      - LETSENCRYPT_HOST=lepro.ddns.net
+      - VIRTUAL_HOST=lepro.ddns.net/site
+      - LETSENCRYPT_HOST=lepro.ddns.net/site
     networks:
       - ic_network
   ic-webapp:
