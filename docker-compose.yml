@@ -15,6 +15,14 @@ services:
     volumes:
       - ${PWD}/servers.json:/pgadmin4/servers.json
       - pgadmin_data:/var/lib/pgadmin
+  static-website-eazy:
+    container_name: static-website-eazy
+#        ports:
+#            - '80:80'
+    image: eazytraining/static-website-eazy
+    environment:
+    VIRTUAL_HOST: lepro.ddns.net/site
+    LETSENCRYPT_HOST: lepro.ddns.net/site
   ic-webapp:
     container_name: ic-webapp
    # ports:
