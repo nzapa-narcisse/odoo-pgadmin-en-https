@@ -21,8 +21,8 @@ services:
 #            - '80:80'
     image: eazytraining/static-website-eazy
     environment:
-      - VIRTUAL_HOST=lepro.ddns.net/site
-      - LETSENCRYPT_HOST=lepro.ddns.net/site
+      - VIRTUAL_HOST=lepro.ddns.net
+      - LETSENCRYPT_HOST=lepro.ddns.net
     networks:
       - ic_network
   ic-webapp:
@@ -32,8 +32,8 @@ services:
     environment:
       - ODOO_URL=https://lepro.ddns.net/odoo
       - PGADMIN_URL=https://lepro.ddns.net/pgadmin
-      - VIRTUAL_HOST=lepro.ddns.net
-      - LETSENCRYPT_HOST=lepro.ddns.net
+      - VIRTUAL_HOST=lepro.ddns.net/site
+      - LETSENCRYPT_HOST=lepro.ddns.net/site
     image: nzapa/ic-webapp-3:1.0
     networks:
       - ic_network
