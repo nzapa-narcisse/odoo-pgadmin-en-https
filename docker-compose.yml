@@ -17,8 +17,8 @@ services:
       - pgadmin_data:/var/lib/pgadmin
   ic-webapp:
     container_name: ic-webapp
-    ports:
-      - "8080:8080"
+   # ports:
+   #   - "8080:8080"
     environment:
       - ODOO_URL=https://lepro.ddns.net/odoo
       - PGADMIN_URL=https://lepro.ddns.net/pgadmin
