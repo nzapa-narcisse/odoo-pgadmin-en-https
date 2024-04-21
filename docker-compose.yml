@@ -24,7 +24,7 @@ services:
       - PGADMIN_URL=https://lepro.ddns.net/pgadmin
       - VIRTUAL_HOST=lepro.ddns.net/ic-webapp
       - LETSENCRYPT_HOST=lepro.ddns.net/ic-webapp
-    image: choco1992/ic-webapp:v1.0
+    image: nzapa/ic-webapp-3:1.0
     networks:
       - ic_network
   postgres:
