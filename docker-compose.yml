@@ -8,8 +8,8 @@ services:
     environment:
       - PGADMIN_DEFAULT_EMAIL=odoo@eazytraining.fr
       - PGADMIN_DEFAULT_PASSWORD=odoo_pgadmin_password
-      - VIRTUAL_HOST=lepro.ddns.net/pgadmin
-      - LETSENCRYPT_HOST=lepro.ddns.net/pgadmin
+      - VIRTUAL_HOST=pgadmin.genious.wynslotech.com
+      - LETSENCRYPT_HOST=pgadmin.genious.wynslotech.com
     # ports:
     #   - "5050:80"
     volumes:
@@ -30,10 +30,10 @@ services:
    # ports:
    #   - "8080:8080"
     environment:
-      - ODOO_URL=https://lepro.ddns.net/odoo
-      - PGADMIN_URL=https://lepro.ddns.net/pgadmin
-      - VIRTUAL_HOST=lepro.ddns.net/site
-      - LETSENCRYPT_HOST=lepro.ddns.net/site
+      - ODOO_URL=https://odoo.genious.wynslotech.com
+      - PGADMIN_URL=https://pgadmin.genious.wynslotech.com
+      - VIRTUAL_HOST=genious.wynslotech.com
+      - LETSENCRYPT_HOST=genious.wynslotech.com
     image: nzapa/ic-webapp-3:1.0
     networks:
       - ic_network
@@ -42,8 +42,8 @@ services:
       - POSTGRES_USER=odoo_user
       - POSTGRES_PASSWORD=odoo_password
       - POSTGRES_DB=postgres
-      - VIRTUAL_HOST=lepro.ddns.net/postgres
-      - LETSENCRYPT_HOST=lepro.ddns.net/postgres
+#      - VIRTUAL_HOST=lepro.ddns.net/postgres
+#      - LETSENCRYPT_HOST=lepro.ddns.net/postgres
     networks:
       - ic_network
     volumes:
@@ -68,8 +68,8 @@ services:
       - USER=odoo_user
       - PASSWORD=odoo_password
       - HOST=postgres
-      - VIRTUAL_HOST=lepro.ddns.net/odoo
-      - LETSENCRYPT_HOST=lepro.ddns.net/odoo
+      - VIRTUAL_HOST=odoo.genious.wynslotech.com
+      - LETSENCRYPT_HOST=odoo.genious.wynslotech.com
     image: odoo:13.0
   nginx-proxy:
     image: jwilder/nginx-proxy
