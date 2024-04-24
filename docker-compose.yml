@@ -10,6 +10,8 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=odoo_pgadmin_password
       - VIRTUAL_HOST=pgadmin.genious.wynslotech.com
       - LETSENCRYPT_HOST=pgadmin.genious.wynslotech.com
+      - VIRTUEL_PORT=80
+      - LETSENCRYPT_EMAIL=nzpanarcisse@gmail.com
     # ports:
     #   - "5050:80"
     volumes:
@@ -34,6 +36,7 @@ services:
       - VIRTUAL_HOST=genious.wynslotech.com
       - LETSENCRYPT_HOST=genious.wynslotech.com
       - VIRTUAL_PORT=8080 
+      - LETSENCRYPT_EMAIL=nzpanarcisse@gmail.com
     image: nzapa/ic-webapp-3:1.0
     networks:
       - ic_network
@@ -70,7 +73,8 @@ services:
       - HOST=postgres
       - VIRTUAL_HOST=odoo.genious.wynslotech.com
       - LETSENCRYPT_HOST=odoo.genious.wynslotech.com
-      - VIRTUAL_PORT=8069 
+      - VIRTUAL_PORT=8069
+      - LETSENCRYPT_EMAIL=nzpanarcisse@gmail.com
     image: odoo:13.0
   nginx-proxy:
     image: jwilder/nginx-proxy
