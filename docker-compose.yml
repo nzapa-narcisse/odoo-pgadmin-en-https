@@ -71,9 +71,9 @@ services:
       - USER=odoo_user
       - PASSWORD=odoo_password
       - HOST=postgres
-      - VIRTUAL_HOST=odoo.genious.wynslotech.com
+      - VIRTUAL_HOST=odoo, odoochat
       - LETSENCRYPT_HOST=odoo.genious.wynslotech.com
-      - VIRTUAL_PORT=8069
+      - VIRTUAL_PORT=8069, 8072
       - LETSENCRYPT_EMAIL=nzpanarcisse@gmail.com
     image: odoo:13.0
   nginx-proxy:
