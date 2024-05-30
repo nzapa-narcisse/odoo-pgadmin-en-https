@@ -30,6 +30,7 @@ services:
     container_name: ic-webapp
     ports:
       - "8080:8080"
+      - "8072:8072"
     environment:
       - ODOO_URL=https://odoo.genious.wynslotech.com
       - PGADMIN_URL=https://pgadmin.genious.wynslotech.com
